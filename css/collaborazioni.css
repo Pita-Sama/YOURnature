@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    font-size: 0.95em; /* Testo leggermente più piccolo */
+}
+
+header {
+    background-color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+#tidio-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+
+.contact-info {
+    display: flex;
+    gap: 20px;
+    color: #2c3e50;
+    font-size: 0.9em; /* Testo leggermente più piccolo */
+    margin-left: 50px;
+}
+
+.contact-info span {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.contact-info span:hover {
+    color: #a0a0a0;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em; /* Testo leggermente più piccolo */
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.login-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #2ecc71;
+}
+
+.signup-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: #2980b9;
+}
+
+.project-container {
+    max-width: 1000px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 0.95em; /* Testo leggermente più piccolo */
+}
+
+.project-header {
+    text-align: center;
+    padding: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.project-header h1 {
+    color: #27ae60;
+    margin-bottom: 15px;
+    font-size: 1.8em; /* Mantiene dimensioni titolo */
+}
+
+.project-content {
+    padding: 30px 0;
+    line-height: 1.8;
+    color: #333;
+}
+
+.project-content h2 {
+    color: #2c3e50;
+    margin: 30px 0 15px;
+    border-left: 4px solid #27ae60;
+    padding-left: 10px;
+    font-size: 1.4em; /* Mantiene dimensioni sottotitoli */
+}
+
+.project-content p {
+    margin-bottom: 20px;
+}
+
+.collaboration-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 0;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.collaboration-text {
+    flex: 1;
+    min-width: 300px;
+    border-bottom: 1px solid #eee;
+}
+
+.collaboration-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.collaboration-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collaboration-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        margin-top: 60px;
+    }
+    
+    .collaboration-section {
+        flex-direction: column;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .collaboration-text, .collaboration-image {
+        min-width: 100%;
+    }
+    
+    .collaboration-image {
+        order: -1;
+        margin-bottom: 20px;
+    }
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+    z-index: 100;
+    font-size: 0.9em; /* Testo leggermente più piccolo */
+}
