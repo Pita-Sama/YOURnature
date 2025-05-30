@@ -35,7 +35,8 @@ if(isset($_POST['submit'])){
             	$error= "Email non verificata";
             
             elseif(password_verify($password . $record["salt"], $record["pass"])){
-            	$_SESSION['user'] = $username;
+            	$id = $record['id'];
+            	$_SESSION['user'] = $id;
                 $_SESSION['start_time'] = time();
                 header("Location: home.php");
                 exit();
